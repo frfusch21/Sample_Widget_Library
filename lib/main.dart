@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:widget_library/widgets/AnimatedContainer1.dart';
 import 'package:widget_library/widgets/AnimatedContainer2.dart';
 import 'package:widget_library/widgets/BarChartStatic.dart';
+import 'package:widget_library/widgets/VideoWidget.dart';
 
 
 void main() {
@@ -95,7 +96,6 @@ class TableOfContent extends StatelessWidget {
                   padding: new EdgeInsets.all(5.0),
                   child: Column(
                     children: <Widget>[
-
                       RaisedButton(
                         child: Text("Bar Chart \n Static"),
                        onPressed: () {
@@ -110,7 +110,18 @@ class TableOfContent extends StatelessWidget {
           Row(
             children: <Widget>[
               Container(
-                child: Column()
+                  padding: new EdgeInsets.all(5.0),
+                  child: Column(
+                    children: <Widget>[
+                      RaisedButton(
+                        child: Text("Video"),
+                        onPressed: () {
+                          Navigator.of(context).push(
+                              MaterialPageRoute(builder: (context) => Video()));
+                        },
+                      ),
+                    ],
+                  )
               ),
               Container(
                   child: Column()
